@@ -3,3 +3,6 @@
 /[gmnq]conf
 /[gmnq]conf-cfg
 /qconf-moc.cc
+/cfconfig
+/cfout_constraints.*
+/cfoutconfig

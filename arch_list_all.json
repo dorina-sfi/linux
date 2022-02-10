@@ -1,0 +1,111 @@
+{
+    "alpha": {
+        "ARCH": "alpha",
+        "SRCARCH": "alpha"
+        },
+    "arc":{
+        "ARCH": "arc",
+        "SRCARCH": "arc"
+        },
+    "arm":{
+        "ARCH": "arm",
+        "SRCARCH": "arm"
+    },
+    "arm64":{
+        "ARCH": "arm64",
+        "SRCARCH": "arm64"
+    },
+    "c6x":{
+        "ARCH": "c6x",
+        "SRCARCH": "c6x"
+    },
+    "csky":{
+        "ARCH": "csky",
+        "SRCARCH": "csky"
+    },
+    "h8300":{
+        "ARCH": "h8300",
+        "SRCARCH": "h8300"
+    },
+    "hexagon":{
+        "ARCH":"hexagon",
+        "SRCARCH": "hexagon"
+    },
+    "ia64":{
+        "ARCH": "ia64",
+        "SRCARCH": "ia64"
+    },
+    "m68k":{
+        "ARCH": "m68k",
+        "SRCARCH": "m68k"
+    },
+    "microblaze":{
+        "ARCH": "microblaze",
+        "SRCARCH": "microblaze"
+    },
+    "mips":{
+        "ARCH": "mips",
+        "SRCARCH": "mips"
+    },
+    "nds32":{
+        "ARCH": "nds32",
+        "SRCARCH": "nds32"
+    },
+    "nios2":{
+        "ARCH":"nios2",
+        "SRCARCH": "nios2"
+    },
+    "openrisc":{
+        "ARCH": "openrisc",
+        "SRCARCH": "openrisc"
+    },
+    "parisc":{
+        "ARCH": "parisc",
+        "SRCARCH": "parisc"
+    },
+    "powerpc":{
+        "ARCH": "powerpc",
+        "SRCARCH": "powerpc"
+    },
+    "riscv":{
+        "ARCH": "riscv",
+        "SRCARCH": "riscv"
+    },
+    "s390":{
+        "ARCH": "s390",
+        "SRCARCH": "s390"
+    },
+    "sh":{
+        "ARCH": "sh",
+        "SRCARCH": "sh"
+    },
+    "sh64":{
+        "ARCH": "sh64",
+        "SRCARCH": "sh64"
+    },
+    "sparc32":{
+        "ARCH": "sparc32",
+        "SRCARCH": "sparc"
+    },
+    "sparc64":{
+        "ARCH": "sparc64",
+        "SRCARCH": "sparc"
+    },
+    "um":{
+        "ARCH": "um",
+        "SRCARCH": "um"
+    },
+    "i386":{
+        "ARCH": "i386",
+        "SRCARCH": "x86"
+    },
+    "x86-64":{
+        "ARCH": "x86_64",
+        "SRCARCH": "x86"
+    },
+    "xtensa":{
+        "ARCH": "xtensa",
+        "SRCARCH": "xtensa"
+    }
+}
+

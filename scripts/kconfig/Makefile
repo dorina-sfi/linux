@@ -35,6 +35,8 @@ menuconfig-prog	:= mconf
 nconfig-prog	:= nconf
 gconfig-prog	:= gconf
 xconfig-prog	:= qconf
+cftestgenconfig-prog	:= cftestgenconfig
+cftestconfig-prog	:= cftestconfig
 cfconfig-prog    := cfconfig
 cfoutconfig-prog := cfoutconfig
 
@@ -47,7 +49,7 @@ PHONY += build_$(1)
 build_$(1): $(obj)/$($(1)-prog)
 endef
 
-$(foreach c, config menuconfig nconfig gconfig xconfig cfconfig \
+$(foreach c, config menuconfig nconfig gconfig xconfig cfconfig cftestgenconfig cftestconfig\
 cfoutconfig, $(eval $(call config_rule,$(c))))
 
 PHONY += localmodconfig localyesconfig
@@ -188,6 +190,25 @@ cfconfig-objs    := cfconfig.o $(cfconf-objs) $(common-objs)
 cfoutconfig-objs := cfoutconfig.o $(cfconf-objs) $(common-objs)
 
 HOSTCFLAGS_picosat.o = -DTRACE -Wno-missing-prototypes -Wno-pointer-compare
+
+# cftestgenconfig: Used for the tgenconfig target based on C++ 
+hostprogs	+= cftestgenconfig
+cftestgenconfig-cxxobjs	:= cftestgenconfig.o 
+cftestgenconfig-objs	:= images.o $(common-objs) $(cfconf-objs)
+
+HOSTLDLIBS_cftestgenconfig	= $(shell . $(obj)/cftestgenconfig-cfg && echo $$libs)
+HOSTCXXFLAGS_cftestgenconfig.o	= $(shell . $(obj)/cftestgenconfig-cfg && echo $$cflags)
+
+$(obj)/cftestgenconfig.o: $(src)/cftestgenconfig.h $(obj)/cftestgenconfig-cfg 
+
+# cftestconfig: Used for the tconfig target based on C++ 
+hostprogs	+= cftestconfig 
+cftestconfig-cxxobjs	:= cftestconfig.o 
+cftestconfig-objs	:= images.o $(common-objs) $(cfconf-objs)
+
+HOSTLDLIBS_cftestconfig	= $(shell . $(obj)/cftestconfig-cfg && echo $$libs)
+HOSTCXXFLAGS_cftestconfig.o	= $(shell . $(obj)/cftestconfig-cfg && echo $$cflags)
+
 
 # qconf: Used for the xconfig target based on Qt
 hostprogs	+= qconf

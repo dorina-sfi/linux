@@ -24,7 +24,7 @@ size_t satmap_size;
 
 struct sdv_list *sdv_symbols; /* array with conflict-symbols */
 
-bool CFDEBUG = false;
+bool CFDEBUG = true;
 bool stop_rangefix = false;
 
 struct fexpr *const_false; /* constant False */

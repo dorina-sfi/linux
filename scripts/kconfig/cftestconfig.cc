@@ -57,7 +57,7 @@ void ConflictFrameworkSetup::init_default() {
     config_sample_folder = "config.";
     config_prob = "10";
 
-    mode = "2";
+    mode = "multi";
     arch = "x86_64";
     srcarch = "x86";
     num_threads = 1;
@@ -65,6 +65,7 @@ void ConflictFrameworkSetup::init_default() {
     num_config_prob = 9;
     min_conf_size = 1;
     max_conf_size = 1;
+    arch_list = "arch_list_all.json";
 }
 
 /**
@@ -94,6 +95,12 @@ void ConflictFrameworkSetup::init_console() {
 
     /// get max conflict size
     max_conf_size = getenv("max_conf_size")?atoi(getenv("max_conf_size")):max_conf_size;
+
+    /// get architecture list
+    arch_list = getenv("arch_list")?getenv("arch_list"):arch_list;
+
+    /// get test path
+    testing_path = getenv("testing_path")?getenv("testing_path"):testing_path;
 }
 
 /**
@@ -128,22 +135,22 @@ void ConflictFramework::run_tests() {
     //get current working directory
     spdlog::info("Current working directory: {}", SETUP.working_path);
 
-    //get test directory
+    //test directory
     spdlog::info("Current test directory: {}", SETUP.testing_path);
 
-    if (SETUP.mode == "1") {
-        run_mode_1();
-    } else if (SETUP.mode == "2") {
-        run_mode_2();
-    } else if (SETUP.mode == "3") {
-        run_mode_3();
+    if (SETUP.mode == "single") {
+        run_mode_single();
+    } else if (SETUP.mode == "multi") {
+        run_mode_multi();
+    } else if (SETUP.mode == "multi_arch") {
+        run_mode_multi_arch();
     }
 }
 
 /**
- * Mode 1: Generates conflicts for an already existing configuration
+ * Mode single: Generates conflicts for an already existing configuration
  */
-void ConflictFramework::run_mode_1() {
+void ConflictFramework::run_mode_single() {
     for (int conflict_size = SETUP.min_conf_size; conflict_size <= SETUP.max_conf_size; conflict_size++) {
     setenv("conflict_size", std::to_string(conflict_size).c_str(), true);
         for (int j = 0; j < SETUP.num_conflicts; j++) {
@@ -153,13 +160,12 @@ void ConflictFramework::run_mode_1() {
 }
 
 /**
- * Mode 2: Generates configuration and conflicts for a given architecture
+ * Mode multi: Generates configuration and conflicts for a given architecture
  */
-void ConflictFramework::run_mode_2() {
+void ConflictFramework::run_mode_multi() {
     setenv("ARCH", SETUP.arch.c_str(), true);
     setenv("SRCARCH", SETUP.srcarch.c_str(), true);
 
-    // generate
     for (int i = 1; i <= SETUP.num_config_prob; i++) {
         generate_random_config();
         int prob = i * 10;
@@ -170,14 +176,18 @@ void ConflictFramework::run_mode_2() {
         string oldfile = SETUP.working_path + "/.config";
         string newfile = SETUP.config_sample_dir + "/" + "." + SETUP.config_sample_folder + to_string(prob);
 
-        if (rename(oldfile.c_str(), newfile.c_str()) != 0){
-            perror("Error renaming file");
+        bool exist = std::filesystem::exists(newfile);
+        if (exist){
+            std::filesystem::remove_all(newfile);
+            std::filesystem::copy(oldfile.c_str(), newfile.c_str());
+        } else
+        {
+            std::filesystem::copy(oldfile.c_str(), newfile.c_str());
         }
 
         setenv("config_sample_dir", SETUP.config_sample_dir.c_str(), true);
         setenv("config_prob", SETUP.config_prob.c_str(), true);
 
-        generate_random_config();
         for (int conflict_size = SETUP.min_conf_size; conflict_size <= SETUP.max_conf_size; conflict_size++) {
             setenv("conflict_size", std::to_string(conflict_size).c_str(), true);
             for (int j = 0; j < SETUP.num_conflicts; j++) {
@@ -188,10 +198,10 @@ void ConflictFramework::run_mode_2() {
 }
 
 /**
- * Mode 3: Generates configuration and conflicts with a given list of architecture
+ * Mode multi_arch: Generates configuration and conflicts with a given list of architecture
  */
-void ConflictFramework::run_mode_3() {
-    std::string arch_list_test = SETUP.testing_path + "/arch_list_3_arch.json";
+void ConflictFramework::run_mode_multi_arch() {
+    std::string arch_list_test = SETUP.testing_path + "/" + SETUP.arch_list;
     std::ifstream fsConfig(arch_list_test);
     json config_arch = json::parse(fsConfig);
 
@@ -220,26 +230,30 @@ void ConflictFramework::run_mode_3() {
             string oldfile = SETUP.working_path + "/.config";
             string newfile = SETUP.config_sample_dir + "/" + "." + SETUP.config_sample_folder + to_string(prob);
 
-            if (rename(oldfile.c_str(), newfile.c_str()) != 0)
-                perror("Error renaming file");
+            bool exist = std::filesystem::exists(newfile);
+            if (exist){
+                std::filesystem::remove_all(newfile);
+                std::filesystem::copy(oldfile.c_str(), newfile.c_str());
+            } else
+            {
+                std::filesystem::copy(oldfile.c_str(), newfile.c_str());
+            }
 
             setenv("arch", SETUP.arch.c_str(), true);
             setenv("srcarch", SETUP.srcarch.c_str(), true);
             setenv("config_sample_dir", SETUP.config_sample_dir.c_str(), true);
             setenv("config_prob", SETUP.config_prob.c_str(), true);
 
-            generate_random_config();
-
             vector<thread> threads;
             for (int conflict_size = SETUP.min_conf_size; conflict_size <= SETUP.max_conf_size; conflict_size++) {
                 setenv("conflict_size", std::to_string(conflict_size).c_str(), true);
                 for (int j = 0; j < SETUP.num_conflicts; j++) {
                     threads.push_back(thread(&test_config_resolution));
-                    std::this_thread::sleep_for(std::chrono::milliseconds(600));
+                    std::this_thread::sleep_for(std::chrono::milliseconds(100));
                     if (j % SETUP.num_threads == 0 || j == SETUP.num_conflicts - 1) {
                         for (auto &th: threads) {
                             th.join();
-                            std::this_thread::sleep_for(std::chrono::milliseconds(600));
+                            std::this_thread::sleep_for(std::chrono::milliseconds(100));
                         }
                         threads.clear();
                     }
@@ -276,7 +290,7 @@ void generate_random_config(){
 }
 
 /**
- * Call the tgenconfig script with the make command and prints the output
+ * Call the cftestgenconfig script with the make command and prints the output
  */
 void test_config_resolution(){
 

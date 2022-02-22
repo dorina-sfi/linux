@@ -147,6 +147,8 @@ help:
 	@echo  '  testconfig	  - Run Kconfig unit tests (requires python3 and pytest)'
 	@echo  '  cfconfig        - CLI tool for debugging ConfigFix'
 	@echo  '  cfoutconfig     - Print constraints and DIMACS-output into files'
+	@echo  '  cftestgenconfig     - Tool for generating and solving conflicts'
+	@echo  '  cftestconfig     - Tool for testing random configurations and conflicts'
 
 # ===========================================================================
 # object files used by all kconfig flavours
@@ -191,7 +193,7 @@ cfoutconfig-objs := cfoutconfig.o $(cfconf-objs) $(common-objs)
 
 HOSTCFLAGS_picosat.o = -DTRACE -Wno-missing-prototypes -Wno-pointer-compare
 
-# cftestgenconfig: Used for the tgenconfig target based on C++ 
+# cftestgenconfig: Used for the cftestgenconfig target based on C++ 
 hostprogs	+= cftestgenconfig
 cftestgenconfig-cxxobjs	:= cftestgenconfig.o 
 cftestgenconfig-objs	:= images.o $(common-objs) $(cfconf-objs)
@@ -201,7 +203,7 @@ HOSTCXXFLAGS_cftestgenconfig.o	= $(shell . $(obj)/cftestgenconfig-cfg && echo $$
 
 $(obj)/cftestgenconfig.o: $(src)/cftestgenconfig.h $(obj)/cftestgenconfig-cfg 
 
-# cftestconfig: Used for the tconfig target based on C++ 
+# cftestconfig: Used for the cftestconfig target based on C++ 
 hostprogs	+= cftestconfig 
 cftestconfig-cxxobjs	:= cftestconfig.o 
 cftestconfig-objs	:= images.o $(common-objs) $(cfconf-objs)

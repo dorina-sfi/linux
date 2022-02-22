@@ -25,6 +25,7 @@ struct ConflictFrameworkSetup{
     std::int64_t num_config_prob;
     std::int64_t min_conf_size;
     std::int64_t max_conf_size;
+    std::string arch_list;
 
     void init_default();
     void init_console();
@@ -40,9 +41,9 @@ public:
 
     bool init(const ConflictFrameworkSetup& setup);
 
-    void run_mode_1();
-    void run_mode_2();
-    void run_mode_3();
+    void run_mode_single();
+    void run_mode_multi();
+    void run_mode_multi_arch();
 
     void run_tests();
 };

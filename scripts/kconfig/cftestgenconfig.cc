@@ -24,12 +24,9 @@
 #include <filesystem>
 #include <map>
 #include <iomanip>
-
-#include <nlohmann/json.hpp>
 #include "spdlog/spdlog.h"
 
 using namespace std;
-using json = nlohmann::json;
 namespace fs = std::filesystem;
 
 // Mersenne Twister random number generator, initialised once
@@ -327,10 +324,10 @@ void ConflictGenerator::print_sample_stats() {
             }
         }
     spdlog::info("Sym count    Boolean        Tristates");
-    spdlog::info("--------- ------ ------ ----- ----- -----");
-    spdlog::info("               Y      N     Y     M     N");
-    spdlog::info("   {}     {}  {}     {}     {}     {}",
-                 count, bool_y, bool_n, tri_y, tri_m, tri_n);
+    spdlog::info("--------- ------ ------   ------  ------  ------");
+    spdlog::info("           Y      N        Y      M       N");
+    spdlog::info("{}      {}   {}      {}    {}    {}",
+                        count, bool_y, bool_n, tri_y, tri_m, tri_n);
     // set static variables
     if (tri_y + tri_m + tri_n > 0)
         tristates = true;
@@ -577,10 +574,6 @@ bool ConflictGenerator::verify_diagnosis(int i, const std::stringstream &csv_row
     bool RESOLVED = false;
     // check 2 - fix fully applied
     bool APPLIED = false;
-    // config reset error
-    bool ERR_RESET = false;
-    // save & reload config - should match
-    bool CONFIGS_MATCH = false;
 
     /// Creates the permutation structure
     struct sfix_list *permutation = sfix_list_init();
@@ -608,7 +601,6 @@ bool ConflictGenerator::verify_diagnosis(int i, const std::stringstream &csv_row
             if (config_compare(initial_config) != 0) {
                 spdlog::error("Could not reset configuration after testing permutation:");
                 print_diagnosis_symbol(permutation);
-                ERR_RESET = true;
                 break;
             }
             spdlog::info("TEST FAILED");
@@ -638,10 +630,9 @@ bool ConflictGenerator::verify_diagnosis(int i, const std::stringstream &csv_row
     // reload, compare
     conf_read(config_filename.str().c_str());
 
-    if (config_compare(after_write) == 0)
-        CONFIGS_MATCH = true;
-    else
+    if (config_compare(after_write) != 0){
         spdlog::warn("Reloaded configuration and backup mismatch");
+    }
 
     csv_row_diag << (RESOLVED ? "YES" : "NO") << ",";
     csv_row_diag << (APPLIED ? "YES" : "NO") << ",";
@@ -814,7 +805,6 @@ static SymbolMap config_backup() {
     int unknowns = 0;
 
     struct symbol *sym;
-
     std::string key;
     std::string val;
     std::string val_old;
@@ -834,10 +824,13 @@ static SymbolMap config_backup() {
 
             if (backup_table.count(key) > 0) {
                 val_old = backup_table[key];
-                spdlog::info("Duplicate key: {} {} {}", sym_get_type_name(sym), sym_get_name(sym), sym->name);
-                if (val != val_old) {
-                    spdlog::info("Value has changed: {} {}", val_old, val);
+                if(sym_get_name(sym)!= NULL) {
+                    spdlog::info("Duplicate key: {}", sym_get_type_name(sym), sym_get_name(sym), sym->name);
+                    if (val != val_old) {
+                        spdlog::info("Value has changed: {} {}", val_old, val);
+                    }
                 }
+
             }
             backup_table[key] = val;
         }

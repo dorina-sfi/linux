@@ -1,18 +1,62 @@
-Linux kernel
-============
+# Testing Framework Manual
+-----
+### Step 1: Use the following commands to install the needed packages for the programm:
+----
+sudo apt install pkg-config g++ qtbase5-dev
 
-There are several guides for kernel developers and users. These guides can
-be rendered in a number of formats, like HTML and PDF. Please read
-Documentation/admin-guide/README.rst first.
+sudo apt-get install libgtk-3-dev
 
-In order to build the documentation, use ``make htmldocs`` or
-``make pdfdocs``.  The formatted documentation can also be read online at:
+sudo apt-get update -y
 
-    https://www.kernel.org/doc/html/latest/
+sudo apt-get install -y liberror-perl
 
-There are various text files in the Documentation/ subdirectory,
-several of them using the Restructured Text markup notation.
+sudo dpkg --configure -a
 
-Please read the Documentation/process/changes.rst file, as it contains the
-requirements for building and running the kernel, and information about
-the problems which may result by upgrading your kernel.
+sudo apt install git
+
+sudo apt install make
+
+sudo apt-get install bison
+
+sudo apt-get install flex
+
+sudo apt-get install libncurses5-dev
+
+sudo apt-get install gtk2.0
+
+sudo apt-get install build-essential libgtk2.0-dev
+
+sudo apt-get install libgtk2.0-dev libglib2.0-dev libglade2-dev
+
+sudo apt-get install nlohmann-json3-dev
+
+sudo apt install libspdlog-dev
+
+----
+### Step 2: The programm can be called by using the command make cftestconfig. The programm also offers 3 modes from which the user can choose.
+----
+### mode = "single": 
+Gives the user the option from an existing configuration to generate several conflicts, solve them and save the results.
+
+### Example:
+
+make cftestconfig mode=”single” arch="arc" srcarch="arc" config_prob="10" 
+min_conf_size=1 max_conf_size=1 num_conflicts=1 config_sample_dir="~tests/arc/config.10" 
+
+----
+### mode = "multi": 
+Gives the user the option to generate multiple random configurations and generate for every configuration a random set of conflicts for one architecture, 
+the conflict is solved and saved in the results file. It calls first “make randconfig” and “make cftestgenconfig” afterward.
+
+### Example
+make cftestconfig mode=”multi” arch="arc" srcarch="arc" min_conf_size=1 max_conf_size=1 num_conflicts=1 num_config_prob=1 testing_path="~/tests_arch_arc"
+
+----
+### mode = "multi_arch": 
+Gives the user the option to generate multiple random configurations and generate for every configuration a random set of conflicts for multiple architectures. 
+This mode allows generating configurations for every architecture automatically. And for every architecture, a specific number of configurations are generated 
+config.10, config.20, etc.  For every configuration multiple conflict.001, conflict.002, etc. are generated and solved. The conflict generation for conflict.001, 
+conflict.002 can be also run in parallel by choosing the number of threads(num_threads).
+
+### Example
+make cftestconfig mode=”multi_arch” min_conf_size=1 max_conf_size=1 num_conflicts=10 num_config_prob=1 num_threads=10 arch_list="arch_list_all.json"

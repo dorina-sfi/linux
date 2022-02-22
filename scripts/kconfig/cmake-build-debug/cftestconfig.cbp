@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cftestconfig"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\nlohmann_json\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cftestconfig">
+				<Option output="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/cftestconfig" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../.."/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/cftestconfig_autogen/include"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 cftestconfig"/>
+					<CompileFile command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cftestconfig/fast">
+				<Option output="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/cftestconfig" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../.."/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/cftestconfig_autogen/include"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 cftestconfig/fast"/>
+					<CompileFile command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cftestgenconfig">
+				<Option output="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/cftestgenconfig" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../.."/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/cftestgenconfig_autogen/include"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 cftestgenconfig"/>
+					<CompileFile command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cftestgenconfig/fast">
+				<Option output="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/cftestgenconfig" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../.."/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/cftestgenconfig_autogen/include"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/9"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/9"/>
+					<Add directory="/usr/include/c++/9/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/9/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 cftestgenconfig/fast"/>
+					<CompileFile command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cftestconfig_autogen">
+				<Option working_dir="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 cftestconfig_autogen"/>
+					<CompileFile command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cftestgenconfig_autogen">
+				<Option working_dir="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 cftestgenconfig_autogen"/>
+					<CompileFile command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j11 -f &quot;/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_constraints.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_constraints.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_defs.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_expr.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_expr.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_rangefix.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_rangefix.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_satutils.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_satutils.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_utils.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cf_utils.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cftestconfig.cc">
+			<Option target="cftestconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cftestconfig.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cftestgenconfig.cc">
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cftestgenconfig.h">
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/cftestconfig_autogen/mocs_compilation.cpp">
+			<Option target="cftestconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/cftestgenconfig_autogen/mocs_compilation.cpp">
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/confdata.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/configfix.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/configfix.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/expr.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/expr.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/images.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/images.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/internal.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/lexer.lex.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/list.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/lkc.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/lkc_proto.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/menu.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/nconf.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/parser.tab.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/parser.tab.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/picosat.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/picosat.h">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/preprocess.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/symbol.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/util.c">
+			<Option target="cftestconfig"/>
+			<Option target="cftestgenconfig"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigTargets-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\spdlog\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/cmake/nlohmann_json/nlohmann_jsonConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\nlohmann_json\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/cmake/nlohmann_json/nlohmann_jsonConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\nlohmann_json\"/>
+		</Unit>
+		<Unit filename="/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/../../../../../../../usr/lib/cmake/nlohmann_json/nlohmann_jsonTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\cmake\nlohmann_json\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

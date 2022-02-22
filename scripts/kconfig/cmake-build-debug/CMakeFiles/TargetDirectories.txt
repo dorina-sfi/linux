@@ -1,0 +1,6 @@
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/CMakeFiles/cftestconfig.dir
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/CMakeFiles/cftestgenconfig.dir
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/CMakeFiles/cftestconfig_autogen.dir
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cmake-build-debug/CMakeFiles/cftestgenconfig_autogen.dir

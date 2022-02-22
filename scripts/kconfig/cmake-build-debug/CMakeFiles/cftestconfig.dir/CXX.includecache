@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cftestconfig.cc
+iostream
+-
+fstream
+-
+thread
+-
+cftestconfig.h
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cftestconfig.h
+string
+-
+filesystem
+-
+nlohmann/json.hpp
+-
+spdlog/spdlog.h
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/spdlog/spdlog.h
+
+/home/dorina/CLionProjects/cftestconfig_debugging_tool/linux_branch_cmake/scripts/kconfig/cftestconfig.h
+string
+-
+

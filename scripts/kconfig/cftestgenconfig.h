@@ -126,4 +126,3 @@ static struct sfix_list* sfl_list_idx(struct sfl_list* list, int index);
 static std::string get_working_path();
 static std::string get_root_path();
 
-

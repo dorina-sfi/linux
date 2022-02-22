@@ -55,8 +55,8 @@ make cftestconfig mode=”multi” arch="arc" srcarch="arc" min_conf_size=1 max_
 ### mode = "multi_arch": 
 Gives the user the option to generate multiple random configurations and generate for every configuration a random set of conflicts for multiple architectures. 
 This mode allows generating configurations for every architecture automatically. And for every architecture, a specific number of configurations are generated 
-config.10, config.20, etc.  For every configuration multiple conflict.001, conflict.002, etc. are generated and solved. The conflict generation for conflict.001, 
-conflict.002 can be also run in parallel by choosing the number of threads(num_threads).
+config.10, config.20, etc.  For every configuration multiple conflict.001, conflict.002, etc. are generated and solved. 
+The conflict generation for conflict.001, conflict.002 can be also run in parallel by choosing the number of threads(num_threads).
 
 ### Example
 make cftestconfig mode=”multi_arch” min_conf_size=1 max_conf_size=1 num_conflicts=10 num_config_prob=1 num_threads=10 arch_list="arch_list_all.json"
